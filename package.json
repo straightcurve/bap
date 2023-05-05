@@ -1,0 +1,23 @@
+{
+  "name": "bap",
+  "version": "1.0.0",
+  "description": "list nearby access points and bind the network adapter to the selected one",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:install:linux": "npm run build && pkg -t node16-linux-x64 dist/index.js --output dist/bap && cp dist/bap ~/.local/bin/",
+    "clean": "rm -rf dist; rm -rf node_modules; rm package-lock.json"
+  },
+  "keywords": [],
+  "author": "A2 <antoniu.ilea@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "@types/prompts": "^2.4.4",
+    "pkg": "^5.8.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}
